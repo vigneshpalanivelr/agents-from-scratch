@@ -191,3 +191,18 @@ Simulates a workflow crash mid-execution and demonstrates recovery by resuming f
 - `get_state` to inspect paused/crashed workflow state
 - Resuming a crashed workflow from the last valid checkpoint
 - Multi-step workflows with per-step persistence guarantees
+
+---
+
+## 09 Tools
+
+**File:** `1 - langgraph-intro/09_tools.ipynb`
+
+Integrates multiple external tools (calculator, stock price lookup, web search) into an LLM agent. The agent autonomously decides which tools to invoke based on the query and can chain multiple tools together.
+
+**Key Concepts:**
+- Binding tools to an LLM with `bind_tools`
+- Custom tool creation with the `@tool` decorator
+- Prebuilt `ToolNode` for executing tool calls
+- `tools_condition` for automatic routing between tool use and final response
+- Tool composition for multi-step tasks (e.g., stock price + arithmetic)
