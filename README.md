@@ -145,3 +145,19 @@ Upgrades the basic chatbot with session-scoped memory using `InMemorySaver`. Dem
 - `add_messages` reducer for maintaining message history
 - Stateful vs. stateless workflow comparison
 - Passing `config={"configurable": {"thread_id": ...}}` at invocation time
+
+---
+
+## 06 SQLite Persistence
+
+**File:** `1 - langgraph-intro/06_sqlite.ipynb`
+**Storage:** `1 - langgraph-intro/storage/chatbot_chkpt.sqlite`
+
+Replaces in-memory checkpointing with `SqliteSaver` backed by a local SQLite database so conversation history survives process restarts. Shows how to initialize the database, run an interactive chat loop, and reload state across sessions.
+
+**Key Concepts:**
+- `SqliteSaver` for durable, file-backed checkpointing
+- Database initialization and connection management
+- Session isolation with `thread_id` across separate runs
+- Interactive chat loop reading from and writing to SQLite
+- Cross-session state persistence vs. in-memory volatile storage
