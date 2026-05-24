@@ -176,3 +176,18 @@ Explores advanced persistence features: retrieving full state history and "time 
 - Resuming execution from a historical checkpoint (time travel)
 - `update_state` for injecting modified state into the graph
 - Separate `thread_id` per workflow to isolate history namespaces
+
+---
+
+## 08 Fault Tolerance
+
+**File:** `1 - langgraph-intro/08_fault_tolerance.ipynb`
+
+Simulates a workflow crash mid-execution and demonstrates recovery by resuming from the last persisted checkpoint. Shows that with checkpointing enabled, no completed work is lost on failure.
+
+**Key Concepts:**
+- `InMemorySaver` checkpointing for intermediate step persistence
+- Simulating interruptions and partial execution failures
+- `get_state` to inspect paused/crashed workflow state
+- Resuming a crashed workflow from the last valid checkpoint
+- Multi-step workflows with per-step persistence guarantees
