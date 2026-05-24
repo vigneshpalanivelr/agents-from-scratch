@@ -68,3 +68,18 @@ jupyter notebook
 | 08 | [Fault Tolerance](#08-fault-tolerance) | Crash recovery with checkpoints |
 | 09 | [Tools](#09-tools) | LLM tool binding & ToolNode |
 | 10 | [Human-In-The-Loop (HITL)](#10-human-in-the-loop-hitl) | Interrupt/resume with human approval |
+
+---
+
+## 01 Simple LLM Agent
+
+**File:** `1 - langgraph-intro/01_simple_llm_agent.ipynb`
+
+Builds the most fundamental LangGraph workflow — a single-node stateless agent that sends user questions to an LLM and returns answers. Introduces the core LangGraph paradigm of defining state, registering nodes, and connecting them with edges.
+
+**Key Concepts:**
+- `StateGraph` initialization and compilation
+- `TypedDict` state schema
+- Defining and registering worker nodes
+- Connecting nodes with `START` and `END` edges
+- Stateless (no memory) LLM invocation via ChatGroq
