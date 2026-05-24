@@ -161,3 +161,18 @@ Replaces in-memory checkpointing with `SqliteSaver` backed by a local SQLite dat
 - Session isolation with `thread_id` across separate runs
 - Interactive chat loop reading from and writing to SQLite
 - Cross-session state persistence vs. in-memory volatile storage
+
+---
+
+## 07 Persistence & Time Travel
+
+**File:** `1 - langgraph-intro/07_persistance.ipynb`
+
+Explores advanced persistence features: retrieving full state history and "time travelling" by resuming execution from any past checkpoint. Also demonstrates `update_state` for injecting modified state into past snapshots.
+
+**Key Concepts:**
+- `get_state_history` to retrieve complete execution audit trail
+- `checkpoint_id` for targeting a specific past snapshot
+- Resuming execution from a historical checkpoint (time travel)
+- `update_state` for injecting modified state into the graph
+- Separate `thread_id` per workflow to isolate history namespaces
