@@ -83,3 +83,19 @@ Builds the most fundamental LangGraph workflow — a single-node stateless agent
 - Defining and registering worker nodes
 - Connecting nodes with `START` and `END` edges
 - Stateless (no memory) LLM invocation via ChatGroq
+
+---
+
+## 02 Sentiment Review Reply Agent
+
+**File:** `1 - langgraph-intro/02_sentiment_review_reply_agent.ipynb`
+**PRD:** `1 - langgraph-intro/02_Insurance_Claim_AI_PRD.pdf`
+
+Builds a multi-step agent that classifies customer reviews as positive or negative using structured LLM output, then routes to different response branches. Demonstrates conditional edges and cyclic graphs with iteration failsafes.
+
+**Key Concepts:**
+- Conditional edges and routing functions
+- Structured output with Pydantic models and `with_structured_output`
+- `Literal` type constraints for classification
+- `operator.add` reducer for accumulating feedback across cycles
+- Cyclic graphs with max-revision limits to prevent infinite loops
