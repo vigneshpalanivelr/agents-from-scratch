@@ -130,3 +130,18 @@ Builds an iterative tweet-generation agent that generates, evaluates, and optimi
 - Structured evaluation schemas with Pydantic
 - Conditional edges with multiple exit paths (approved vs. max iterations)
 - Failsafe mechanisms to prevent infinite loops in cyclic graphs
+
+---
+
+## 05 Chatbot with In-Memory Saver
+
+**File:** `1 - langgraph-intro/05_chatbot_with_inmemory_saver.ipynb`
+
+Upgrades the basic chatbot with session-scoped memory using `InMemorySaver`. Demonstrates the contrast between stateless and stateful workflows, and how `thread_id` isolates conversation history per session.
+
+**Key Concepts:**
+- `InMemorySaver` as a checkpointer for in-process state storage
+- `thread_id` configuration for session isolation
+- `add_messages` reducer for maintaining message history
+- Stateful vs. stateless workflow comparison
+- Passing `config={"configurable": {"thread_id": ...}}` at invocation time
