@@ -206,3 +206,19 @@ Integrates multiple external tools (calculator, stock price lookup, web search) 
 - Prebuilt `ToolNode` for executing tool calls
 - `tools_condition` for automatic routing between tool use and final response
 - Tool composition for multi-step tasks (e.g., stock price + arithmetic)
+
+---
+
+## 10 Human-In-The-Loop (HITL)
+
+**File:** `1 - langgraph-intro/10_HITL.ipynb`
+
+Builds a LinkedIn post generator that pauses execution for human review before posting. Demonstrates how to embed human oversight into agentic workflows using `interrupt()` and `Command(resume=...)`.
+
+**Key Concepts:**
+- `interrupt()` to pause graph execution at a specific node
+- `Command(resume=...)` to inject human feedback and continue execution
+- `MemorySaver` with `interrupt_before` configuration
+- Human approval gate before performing irreversible actions
+- Conditional revision loop: revise on feedback, post on approval
+- Inspecting state history to audit what the agent produced before interruption
