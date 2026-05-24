@@ -1,0 +1,21 @@
+[project]
+name = "agents-from-scratch"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "chromadb>=1.5.9",
+    "ddg>=0.2.2",
+    "ddgs>=9.14.4",
+    "dotenv>=0.9.9",
+    "ipykernel>=7.2.0",
+    "langchain-community>=0.4.1",
+    "langchain-google-genai>=4.2.2",
+    "langchain-groq>=1.1.2",
+    "langchain-openai>=1.2.1",
+    "langgraph>=1.2.0",
+    "langgraph-checkpoint-sqlite>=3.1.0",
+    "protobuf>=6.33.6",
+    "python-dotenv>=1.2.2",
+]

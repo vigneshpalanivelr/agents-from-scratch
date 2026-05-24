@@ -1,0 +1,70 @@
+# Agents From Scratch
+
+A hands-on learning repository for building AI agents using **LangGraph**, progressing from simple stateless LLM calls to complex human-in-the-loop agentic workflows.
+
+## Tech Stack
+
+- **Python 3.11**
+- **LangGraph** — agent orchestration framework
+- **LangChain** — LLM integrations (OpenAI, Groq, Google GenAI)
+- **ChromaDB** — vector store for RAG
+- **SQLite** — persistent checkpointing
+- **uv** — fast Python package manager
+
+## Setup
+
+### Prerequisites
+
+- Python 3.11
+- [uv](https://docs.astral.sh/uv/) package manager
+
+### Installation
+
+```bash
+# Clone the repository
+git clone <repo-url>
+cd agents-from-scratch
+
+# Install dependencies using uv
+uv sync
+
+# Copy environment variables and fill in your API keys
+cp .env.example .env
+```
+
+### Environment Variables
+
+Create a `.env` file in the root with the following keys:
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+GROQ_API_KEY=your_groq_api_key
+GOOGLE_API_KEY=your_google_api_key
+```
+
+### Running Notebooks
+
+```bash
+# Activate the virtual environment
+source .venv/bin/activate
+
+# Launch Jupyter
+jupyter notebook
+```
+
+---
+
+## Notebooks — LangGraph Intro
+
+| # | Notebook | Concept |
+|---|----------|---------|
+| 01 | [Simple LLM Agent](#01-simple-llm-agent) | Stateless LangGraph workflow |
+| 02 | [Sentiment Review Reply Agent](#02-sentiment-review-reply-agent) | Conditional routing & structured output |
+| 03 | [Simple RAG Agent](#03-simple-rag-agent) | Retrieval-Augmented Generation |
+| 04 | [X Post Generator Agent](#04-x-post-generator-agent) | Iterative self-improvement loops |
+| 05 | [Chatbot with In-Memory Saver](#05-chatbot-with-in-memory-saver) | In-memory checkpointing |
+| 06 | [SQLite Persistence](#06-sqlite-persistence) | Long-term SQLite-backed state |
+| 07 | [Persistence & Time Travel](#07-persistence--time-travel) | State history & checkpoint replay |
+| 08 | [Fault Tolerance](#08-fault-tolerance) | Crash recovery with checkpoints |
+| 09 | [Tools](#09-tools) | LLM tool binding & ToolNode |
+| 10 | [Human-In-The-Loop (HITL)](#10-human-in-the-loop-hitl) | Interrupt/resume with human approval |
