@@ -99,3 +99,19 @@ Builds a multi-step agent that classifies customer reviews as positive or negati
 - `Literal` type constraints for classification
 - `operator.add` reducer for accumulating feedback across cycles
 - Cyclic graphs with max-revision limits to prevent infinite loops
+
+---
+
+## 03 Simple RAG Agent
+
+**File:** `1 - langgraph-intro/03_simple_rag_agent.ipynb`
+
+Builds a Retrieval-Augmented Generation agent using Chroma vector store with Google embeddings to answer domain-specific questions. Demonstrates tool-based retrieval and how to distinguish on-topic from off-topic queries.
+
+**Key Concepts:**
+- Vector database (ChromaDB) setup and document ingestion
+- Google GenAI embeddings for semantic search
+- LangChain retriever wrapped as a tool
+- Prebuilt `ToolNode` for executing tool calls
+- `add_messages` reducer for message history
+- Conditional routing based on presence of `tool_calls` in LLM response
