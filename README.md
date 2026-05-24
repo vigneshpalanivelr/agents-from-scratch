@@ -115,3 +115,18 @@ Builds a Retrieval-Augmented Generation agent using Chroma vector store with Goo
 - Prebuilt `ToolNode` for executing tool calls
 - `add_messages` reducer for message history
 - Conditional routing based on presence of `tool_calls` in LLM response
+
+---
+
+## 04 X Post Generator Agent
+
+**File:** `1 - langgraph-intro/04_x_post_genetor_agent.ipynb`
+
+Builds an iterative tweet-generation agent that generates, evaluates, and optimizes posts in a loop until they meet strict quality criteria. Shows how to design self-improving agentic workflows with structured evaluation and loop termination.
+
+**Key Concepts:**
+- State machine with iteration counting for loop control
+- `operator.add` for accumulating generation/feedback history
+- Structured evaluation schemas with Pydantic
+- Conditional edges with multiple exit paths (approved vs. max iterations)
+- Failsafe mechanisms to prevent infinite loops in cyclic graphs
