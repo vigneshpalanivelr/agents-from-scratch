@@ -1,6 +1,6 @@
 uv init
 uv add langgraph langchain_openai ipykernel python-dotenv
 uv add langchain-google-genai langchain-community chromadb protobuf langchain-groq
-uv add langgraph-checkpoint-sqlite ddgs pdfminer.six
+uv add langgraph-checkpoint-sqlite ddgs pdfminer.six langchain langchain-experimental langchain-opentutorial
 
 source .venv/bin/activate
