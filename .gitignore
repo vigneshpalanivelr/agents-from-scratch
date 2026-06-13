@@ -1,5 +1,5 @@
 # Python-generated files
-__pycache__/
+__pycache__/*
 *.py[oc]
 build/
 dist/
@@ -12,3 +12,5 @@ wheels/
 
 # OS files
 .DS_Store
+
+indic*
