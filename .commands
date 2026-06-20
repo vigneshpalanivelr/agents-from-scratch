@@ -3,6 +3,6 @@ uv add langgraph langchain_openai ipykernel python-dotenv
 uv add langchain-google-genai langchain-community chromadb protobuf langchain-groq
 uv add langgraph-checkpoint-sqlite ddgs pdfminer.six langchain langchain-experimental
 uv add langchain-opentutorial pypdf faiss-cpu google-search-results
-uv add langgraph-checkpoint-postgres
-
+uv add langgraph-checkpoint-postgres "psycopg[binary]" twilio fastapi
+uv add python-multipart
 source .venv/bin/activate

@@ -10,6 +10,7 @@ dependencies = [
     "ddgs>=9.14.4",
     "dotenv>=0.9.9",
     "faiss-cpu>=1.14.2",
+    "fastapi>=0.138.0",
     "google-search-results>=2.4.2",
     "hf-transfer>=0.1.9",
     "huggingface-hub>=1.15.0",
@@ -30,4 +31,6 @@ dependencies = [
     "psycopg[binary]>=3.3.4",
     "pypdf>=6.13.0",
     "python-dotenv>=1.2.2",
+    "python-multipart>=0.0.32",
+    "twilio>=9.10.9",
 ]
